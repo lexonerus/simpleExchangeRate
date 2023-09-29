@@ -10,6 +10,8 @@
 		081DD9EE2AC72F2200213AF0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081DD9ED2AC72F2200213AF0 /* MainViewModel.swift */; };
 		081DD9F02AC7300D00213AF0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081DD9EF2AC7300D00213AF0 /* UIViewController+Extension.swift */; };
 		081DD9F32AC7393700213AF0 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081DD9F22AC7393700213AF0 /* Defaults.swift */; };
+		081DD9F52AC7404D00213AF0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081DD9F42AC7404D00213AF0 /* String+Extension.swift */; };
+		081DD9F92AC740B700213AF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 081DD9FB2AC740B700213AF0 /* Localizable.strings */; };
 		086FE7A52AC6FC0300A875A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FE7A42AC6FC0300A875A0 /* AppDelegate.swift */; };
 		086FE7A72AC6FC0300A875A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FE7A62AC6FC0300A875A0 /* SceneDelegate.swift */; };
 		086FE7A92AC6FC0300A875A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FE7A82AC6FC0300A875A0 /* MainViewController.swift */; };
@@ -27,6 +29,10 @@
 		081DD9ED2AC72F2200213AF0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		081DD9EF2AC7300D00213AF0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		081DD9F22AC7393700213AF0 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		081DD9F42AC7404D00213AF0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		081DD9F62AC7407500213AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		081DD9FA2AC740B700213AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		081DD9FC2AC740B900213AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		086FE7A12AC6FC0300A875A0 /* simpleExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086FE7A42AC6FC0300A875A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		086FE7A62AC6FC0300A875A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		081DD9E82AC72D6C00213AF0 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				081DD9FD2AC740C300213AF0 /* Localizations */,
 				081DD9EA2AC72ED200213AF0 /* Resources */,
 				081DD9E92AC72EB700213AF0 /* Lifecycle */,
 				086FE7B22AC6FC0500A875A0 /* Info.plist */,
@@ -108,6 +115,14 @@
 				086FE7AF2AC6FC0500A875A0 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		081DD9FD2AC740C300213AF0 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				081DD9FB2AC740B700213AF0 /* Localizable.strings */,
+			);
+			path = Localizations;
 			sourceTree = "<group>";
 		};
 		086FE7982AC6FC0300A875A0 = {
@@ -187,6 +202,7 @@
 			children = (
 				08DE18272AC7115E0001C620 /* NSObject+Extension.swift */,
 				081DD9EF2AC7300D00213AF0 /* UIViewController+Extension.swift */,
+				081DD9F42AC7404D00213AF0 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +268,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 086FE7982AC6FC0300A875A0;
 			productRefGroup = 086FE7A22AC6FC0300A875A0 /* Products */;
@@ -269,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				086FE7B12AC6FC0500A875A0 /* LaunchScreen.storyboard in Resources */,
+				081DD9F92AC740B700213AF0 /* Localizable.strings in Resources */,
 				086FE7AE2AC6FC0500A875A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +344,7 @@
 				086FE7A92AC6FC0300A875A0 /* MainViewController.swift in Sources */,
 				08DE181F2AC70A8F0001C620 /* RatesAPI.swift in Sources */,
 				08DE18282AC7115E0001C620 /* NSObject+Extension.swift in Sources */,
+				081DD9F52AC7404D00213AF0 /* String+Extension.swift in Sources */,
 				081DD9F32AC7393700213AF0 /* Defaults.swift in Sources */,
 				08DE182A2AC719B70001C620 /* HTTPMethod.swift in Sources */,
 				08DE181D2AC70A230001C620 /* ExchangeRateResponse.swift in Sources */,
@@ -339,10 +358,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		081DD9FB2AC740B700213AF0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				081DD9FA2AC740B700213AF0 /* ru */,
+				081DD9FC2AC740B900213AF0 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		086FE7AF2AC6FC0500A875A0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				086FE7B02AC6FC0500A875A0 /* Base */,
+				081DD9F62AC7407500213AF0 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -355,6 +384,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -418,6 +448,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

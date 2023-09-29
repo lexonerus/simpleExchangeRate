@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  simpleExchangeRate
+
+  Created by Alexey Krzywicki on 29.09.2023.
+  
+*/
+
+"MainScene.Button.Title" = "Get Rates";

@@ -38,7 +38,7 @@ private extension MainViewController {
     }
     func configureButton() {
         view.addSubview(button)
-        button.setTitle("Get Rates", for: .normal)
+        button.setTitle("MainScene.Button.Title".localized, for: .normal)
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         button.backgroundColor = .black
         button.layer.cornerRadius = Defaults.MainScene.buttonCornerRadius
