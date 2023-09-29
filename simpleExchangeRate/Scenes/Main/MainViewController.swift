@@ -13,14 +13,6 @@ class MainViewController: MyViewController {
     
     // MARK: - Properties
     private let viewModel: MainViewModel?
-    private var valuteData: [String: Valute]? {
-        didSet {
-            DispatchQueue.main.async { [weak self] in
-                self?.moveButtonToBottom()
-                self?.tableView.reloadData()
-            }
-        }
-    }
     
     // MARK: - Views
     private let button = UIButton()
@@ -99,8 +91,11 @@ private extension MainViewController {
 // MARK: - Bindings
 private extension MainViewController {
     func bindViewModel() {
-        viewModel?.onDataUpdate = { [weak self] valuteData in
-            self?.valuteData = valuteData
+        viewModel?.onDataUpdate = { [weak self] in
+            DispatchQueue.main.async {
+                self?.moveButtonToBottom()
+                self?.tableView.reloadData()
+            }
         }
     }
 }
@@ -115,13 +110,13 @@ private extension MainViewController {
 // MARK: - TableView delegates
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        valuteData?.count ?? 0
+        viewModel?.valuteData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constraints.ValuteCell.identifier, for: indexPath) as! ValuteTableViewCell
 
-        if let valuteData = valuteData {
+        if let valuteData = viewModel?.valuteData {
             let keys = Array(valuteData.keys)
             let key = keys[indexPath.row]
             let valute = valuteData[key]
