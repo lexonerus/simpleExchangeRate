@@ -12,6 +12,11 @@
 		086FE7A92AC6FC0300A875A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FE7A82AC6FC0300A875A0 /* ViewController.swift */; };
 		086FE7AE2AC6FC0500A875A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086FE7AD2AC6FC0500A875A0 /* Assets.xcassets */; };
 		086FE7B12AC6FC0500A875A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086FE7AF2AC6FC0500A875A0 /* LaunchScreen.storyboard */; };
+		08DE181D2AC70A230001C620 /* ExchangeRateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE181C2AC70A230001C620 /* ExchangeRateResponse.swift */; };
+		08DE181F2AC70A8F0001C620 /* RatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE181E2AC70A8F0001C620 /* RatesAPI.swift */; };
+		08DE18212AC70AC60001C620 /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE18202AC70AC60001C620 /* ServerConstants.swift */; };
+		08DE18282AC7115E0001C620 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE18272AC7115E0001C620 /* NSObject+Extension.swift */; };
+		08DE182A2AC719B70001C620 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE18292AC719B70001C620 /* HTTPMethod.swift */; };
 		0C890BA625A28FFE03EA3601 /* Pods_simpleExchangeRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF7B1F19221F16D3C06760D /* Pods_simpleExchangeRate.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,11 @@
 		086FE7AD2AC6FC0500A875A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086FE7B02AC6FC0500A875A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		086FE7B22AC6FC0500A875A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DE181C2AC70A230001C620 /* ExchangeRateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateResponse.swift; sourceTree = "<group>"; };
+		08DE181E2AC70A8F0001C620 /* RatesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAPI.swift; sourceTree = "<group>"; };
+		08DE18202AC70AC60001C620 /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
+		08DE18272AC7115E0001C620 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		08DE18292AC719B70001C620 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		417260A34C60A7EE0F6B6650 /* Pods-simpleExchangeRate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleExchangeRate.debug.xcconfig"; path = "Target Support Files/Pods-simpleExchangeRate/Pods-simpleExchangeRate.debug.xcconfig"; sourceTree = "<group>"; };
 		B01E647F67F6D73BCB142767 /* Pods-simpleExchangeRate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleExchangeRate.release.xcconfig"; path = "Target Support Files/Pods-simpleExchangeRate/Pods-simpleExchangeRate.release.xcconfig"; sourceTree = "<group>"; };
 		BBF7B1F19221F16D3C06760D /* Pods_simpleExchangeRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleExchangeRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +71,8 @@
 		086FE7A32AC6FC0300A875A0 /* simpleExchangeRate */ = {
 			isa = PBXGroup;
 			children = (
+				08DE18262AC711450001C620 /* Extensions */,
+				08DE18012AC7075E0001C620 /* NetworkLayer */,
 				086FE7A42AC6FC0300A875A0 /* AppDelegate.swift */,
 				086FE7A62AC6FC0300A875A0 /* SceneDelegate.swift */,
 				086FE7A82AC6FC0300A875A0 /* ViewController.swift */,
@@ -69,6 +81,57 @@
 				086FE7B22AC6FC0500A875A0 /* Info.plist */,
 			);
 			path = simpleExchangeRate;
+			sourceTree = "<group>";
+		};
+		08DE18012AC7075E0001C620 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				08DE18042AC7077E0001C620 /* Models */,
+				08DE18022AC7076B0001C620 /* EndpointAPIs */,
+				08DE18202AC70AC60001C620 /* ServerConstants.swift */,
+				08DE18292AC719B70001C620 /* HTTPMethod.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		08DE18022AC7076B0001C620 /* EndpointAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				08DE181E2AC70A8F0001C620 /* RatesAPI.swift */,
+			);
+			path = EndpointAPIs;
+			sourceTree = "<group>";
+		};
+		08DE18042AC7077E0001C620 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08DE181B2AC709D40001C620 /* Responses */,
+				08DE181A2AC709880001C620 /* Requests */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		08DE181A2AC709880001C620 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		08DE181B2AC709D40001C620 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				08DE181C2AC70A230001C620 /* ExchangeRateResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		08DE18262AC711450001C620 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08DE18272AC7115E0001C620 /* NSObject+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4500FB1F0D5F67CA8EEA3CF3 /* Pods */ = {
@@ -202,7 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DE18212AC70AC60001C620 /* ServerConstants.swift in Sources */,
 				086FE7A92AC6FC0300A875A0 /* ViewController.swift in Sources */,
+				08DE181F2AC70A8F0001C620 /* RatesAPI.swift in Sources */,
+				08DE18282AC7115E0001C620 /* NSObject+Extension.swift in Sources */,
+				08DE182A2AC719B70001C620 /* HTTPMethod.swift in Sources */,
+				08DE181D2AC70A230001C620 /* ExchangeRateResponse.swift in Sources */,
 				086FE7A52AC6FC0300A875A0 /* AppDelegate.swift in Sources */,
 				086FE7A72AC6FC0300A875A0 /* SceneDelegate.swift in Sources */,
 			);
