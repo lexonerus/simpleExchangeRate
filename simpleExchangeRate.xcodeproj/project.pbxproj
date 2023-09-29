@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		086FE7AC2AC6FC0300A875A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086FE7AA2AC6FC0300A875A0 /* Main.storyboard */; };
 		086FE7AE2AC6FC0500A875A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086FE7AD2AC6FC0500A875A0 /* Assets.xcassets */; };
 		086FE7B12AC6FC0500A875A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086FE7AF2AC6FC0500A875A0 /* LaunchScreen.storyboard */; };
+		0C890BA625A28FFE03EA3601 /* Pods_simpleExchangeRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF7B1F19221F16D3C06760D /* Pods_simpleExchangeRate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		086FE7AD2AC6FC0500A875A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086FE7B02AC6FC0500A875A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		086FE7B22AC6FC0500A875A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417260A34C60A7EE0F6B6650 /* Pods-simpleExchangeRate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleExchangeRate.debug.xcconfig"; path = "Target Support Files/Pods-simpleExchangeRate/Pods-simpleExchangeRate.debug.xcconfig"; sourceTree = "<group>"; };
+		B01E647F67F6D73BCB142767 /* Pods-simpleExchangeRate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleExchangeRate.release.xcconfig"; path = "Target Support Files/Pods-simpleExchangeRate/Pods-simpleExchangeRate.release.xcconfig"; sourceTree = "<group>"; };
+		BBF7B1F19221F16D3C06760D /* Pods_simpleExchangeRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleExchangeRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C890BA625A28FFE03EA3601 /* Pods_simpleExchangeRate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				086FE7A32AC6FC0300A875A0 /* simpleExchangeRate */,
 				086FE7A22AC6FC0300A875A0 /* Products */,
+				4500FB1F0D5F67CA8EEA3CF3 /* Pods */,
+				A5DB5BFD9C3E87F2B1A62C33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = simpleExchangeRate;
 			sourceTree = "<group>";
 		};
+		4500FB1F0D5F67CA8EEA3CF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				417260A34C60A7EE0F6B6650 /* Pods-simpleExchangeRate.debug.xcconfig */,
+				B01E647F67F6D73BCB142767 /* Pods-simpleExchangeRate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5DB5BFD9C3E87F2B1A62C33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBF7B1F19221F16D3C06760D /* Pods_simpleExchangeRate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 086FE7B52AC6FC0500A875A0 /* Build configuration list for PBXNativeTarget "simpleExchangeRate" */;
 			buildPhases = (
+				B0E07BEDF20DC13AA486ECDB /* [CP] Check Pods Manifest.lock */,
 				086FE79D2AC6FC0300A875A0 /* Sources */,
 				086FE79E2AC6FC0300A875A0 /* Frameworks */,
 				086FE79F2AC6FC0300A875A0 /* Resources */,
+				F20CEBAA35DB3DBF432BD7B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +129,7 @@
 				};
 			};
 			buildConfigurationList = 086FE79C2AC6FC0300A875A0 /* Build configuration list for PBXProject "simpleExchangeRate" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0E07BEDF20DC13AA486ECDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleExchangeRate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F20CEBAA35DB3DBF432BD7B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simpleExchangeRate/Pods-simpleExchangeRate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simpleExchangeRate/Pods-simpleExchangeRate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-simpleExchangeRate/Pods-simpleExchangeRate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		086FE79D2AC6FC0300A875A0 /* Sources */ = {
@@ -287,12 +355,14 @@
 		};
 		086FE7B62AC6FC0500A875A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417260A34C60A7EE0F6B6650 /* Pods-simpleExchangeRate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y8WAQNS7U8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = simpleExchangeRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,12 +385,14 @@
 		};
 		086FE7B72AC6FC0500A875A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B01E647F67F6D73BCB142767 /* Pods-simpleExchangeRate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y8WAQNS7U8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = simpleExchangeRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
