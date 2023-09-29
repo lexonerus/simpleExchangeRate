@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  simpleExchangeRate
+
+  Created by Alexey Krzywicki on 29.09.2023.
+  
+*/
+
+"MainScene.Button.Title" = "Обновить";
+"MainScene.Title" = "Курс Валют";
+
+"ValuteCell.KeyTitle" = "Символ";
+"ValuteCell.KeyValue" = "Значение";

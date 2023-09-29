@@ -1,26 +1,28 @@
 //
-//  ViewController.swift
+//  MainViewModel.swift
 //  simpleExchangeRate
 //
 //  Created by Alexey Krzywicki on 29.09.2023.
 //
 
-import UIKit
+import Foundation
 import RxSwift
 
-class ViewController: UIViewController {
+// MARK: - MainViewModel
+class MainViewModel {
     
+    // MARK: - Properties
     let networkLayer = RatesAPI()
     let disposeBag = DisposeBag()
+    var onDataUpdate: (([String: Valute]?) -> Void)?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
-        
+    // MARK: - Methods
+    func fetchExchangeRates() {
         networkLayer.getExchangeRates()
-            .subscribe(onNext: { exchangeRateResponse in
+            .subscribe(onNext: { [weak self] exchangeRateResponse in
                 // Обработка данных
-                NSObject.log("Exchange rates: \(String(describing: exchangeRateResponse.valute))", level: "DEBUG")
+                let valuteData = exchangeRateResponse.valute
+                self?.onDataUpdate?(valuteData)
             }, onError: { error in
                 // Обработка ошибки
                 NSObject.log("Error: \(error)", level: "DEBUG")
@@ -28,4 +30,3 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 }
-

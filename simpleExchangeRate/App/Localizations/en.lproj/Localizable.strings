@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  simpleExchangeRate
+
+  Created by Alexey Krzywicki on 29.09.2023.
+  
+*/
+
+"MainScene.Button.Title" = "Press to refresh";
+"MainScene.Title" = "Exchange rates";
+
+"ValuteCell.KeyTitle" = "Symbol";
+"ValuteCell.KeyValue" = "Value";

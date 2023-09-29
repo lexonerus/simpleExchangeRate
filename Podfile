@@ -10,5 +10,6 @@ target 'simpleExchangeRate' do
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RealmSwift'
+  pod 'DeviceKit'
 
 end
