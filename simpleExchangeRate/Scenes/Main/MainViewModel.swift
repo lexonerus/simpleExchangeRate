@@ -12,17 +12,20 @@ import RxSwift
 class MainViewModel {
     
     // MARK: - Properties
-    let networkLayer = RatesAPI()
-    let disposeBag = DisposeBag()
+    private let networkLayer = RatesAPI()
+    private let disposeBag = DisposeBag()
+    private let model = MainModel()
     var onDataUpdate: (() -> Void)?
-    var valuteData: [String: Valute]?
+    var valuteData: ValuteData?
+    
     
     // MARK: - Methods
     func fetchExchangeRates() {
         networkLayer.getExchangeRates()
             .subscribe(onNext: { [weak self] exchangeRateResponse in
                 // Обработка данных
-                self?.valuteData = exchangeRateResponse.valute
+                self?.model.saveData(data: exchangeRateResponse.valute ?? ValuteData())
+                self?.valuteData = self?.model.prepareData()
                 self?.onDataUpdate?()
             }, onError: { error in
                 // Обработка ошибки
