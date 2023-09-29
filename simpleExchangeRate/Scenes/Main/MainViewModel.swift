@@ -1,22 +1,22 @@
 //
-//  ViewController.swift
+//  MainViewModel.swift
 //  simpleExchangeRate
 //
 //  Created by Alexey Krzywicki on 29.09.2023.
 //
 
-import UIKit
+import Foundation
 import RxSwift
 
-class ViewController: UIViewController {
+// MARK: - MainViewModel
+class MainViewModel {
     
+    // MARK: - Properties
     let networkLayer = RatesAPI()
     let disposeBag = DisposeBag()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
-        
+    // MARK: - Methods
+    func getData() {
         networkLayer.getExchangeRates()
             .subscribe(onNext: { exchangeRateResponse in
                 // Обработка данных
@@ -28,4 +28,3 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 }
-
