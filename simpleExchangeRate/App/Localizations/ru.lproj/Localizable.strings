@@ -6,4 +6,8 @@
   
 */
 
-"MainScene.Button.Title" = "Получить курсы";
+"MainScene.Button.Title" = "Обновить";
+"MainScene.Title" = "Курс Валют";
+
+"ValuteCell.KeyTitle" = "Символ";
+"ValuteCell.KeyValue" = "Значение";

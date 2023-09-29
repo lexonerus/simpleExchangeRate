@@ -6,4 +6,8 @@
   
 */
 
-"MainScene.Button.Title" = "Get Rates";
+"MainScene.Button.Title" = "Press to refresh";
+"MainScene.Title" = "Exchange rates";
+
+"ValuteCell.KeyTitle" = "Symbol";
+"ValuteCell.KeyValue" = "Value";
