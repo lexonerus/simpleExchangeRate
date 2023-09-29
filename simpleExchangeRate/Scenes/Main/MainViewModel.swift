@@ -14,15 +14,16 @@ class MainViewModel {
     // MARK: - Properties
     let networkLayer = RatesAPI()
     let disposeBag = DisposeBag()
-    var onDataUpdate: (([String: Valute]?) -> Void)?
+    var onDataUpdate: (() -> Void)?
+    var valuteData: [String: Valute]?
     
     // MARK: - Methods
     func fetchExchangeRates() {
         networkLayer.getExchangeRates()
             .subscribe(onNext: { [weak self] exchangeRateResponse in
                 // Обработка данных
-                let valuteData = exchangeRateResponse.valute
-                self?.onDataUpdate?(valuteData)
+                self?.valuteData = exchangeRateResponse.valute
+                self?.onDataUpdate?()
             }, onError: { error in
                 // Обработка ошибки
                 NSObject.log("Error: \(error)", level: "DEBUG")
