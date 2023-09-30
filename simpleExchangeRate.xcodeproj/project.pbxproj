@@ -25,6 +25,7 @@
 		0888BFC12AC8198300B688C4 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFC02AC8198300B688C4 /* ReachabilityService.swift */; };
 		0888BFC72AC8234B00B688C4 /* Valute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFC62AC8234B00B688C4 /* Valute.swift */; };
 		0888BFC92AC82A6000B688C4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFC82AC82A6000B688C4 /* NetworkError.swift */; };
+		0888BFCB2AC8313F00B688C4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFCA2AC8313F00B688C4 /* Provider.swift */; };
 		08DE181D2AC70A230001C620 /* ExchangeRateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE181C2AC70A230001C620 /* ExchangeRateResponse.swift */; };
 		08DE181F2AC70A8F0001C620 /* RatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE181E2AC70A8F0001C620 /* RatesAPI.swift */; };
 		08DE18212AC70AC60001C620 /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE18202AC70AC60001C620 /* ServerConstants.swift */; };
@@ -56,6 +57,7 @@
 		0888BFC02AC8198300B688C4 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		0888BFC62AC8234B00B688C4 /* Valute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valute.swift; sourceTree = "<group>"; };
 		0888BFC82AC82A6000B688C4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0888BFCA2AC8313F00B688C4 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		08DE181C2AC70A230001C620 /* ExchangeRateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateResponse.swift; sourceTree = "<group>"; };
 		08DE181E2AC70A8F0001C620 /* RatesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAPI.swift; sourceTree = "<group>"; };
 		08DE18202AC70AC60001C620 /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				08DE18202AC70AC60001C620 /* ServerConstants.swift */,
 				08DE18292AC719B70001C620 /* HTTPMethod.swift */,
 				0888BFC82AC82A6000B688C4 /* NetworkError.swift */,
+				0888BFCA2AC8313F00B688C4 /* Provider.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				086FE7A52AC6FC0300A875A0 /* AppDelegate.swift in Sources */,
 				0888BFC72AC8234B00B688C4 /* Valute.swift in Sources */,
 				086FE7A72AC6FC0300A875A0 /* SceneDelegate.swift in Sources */,
+				0888BFCB2AC8313F00B688C4 /* Provider.swift in Sources */,
 				0888BFC12AC8198300B688C4 /* ReachabilityService.swift in Sources */,
 				081DD9F02AC7300D00213AF0 /* UIViewController+Extension.swift in Sources */,
 				081DD9FF2AC748C000213AF0 /* ValuteObject.swift in Sources */,

@@ -156,7 +156,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             let symbol = item.symbol ?? "N/A"
             let value = item.value
             
-            cell.updateUI(keyText: symbol, valueText: ((value?.rounded(toDecimalPlaces: 4) ?? "00.00") + " RUB") )
+            cell.updateUI(keyText: symbol, valueText: ((value?.rounded(toDecimalPlaces: 2) ?? "00.00") + " RUB") )
         }
         
         if indexPath.row % 2 == 0 {
