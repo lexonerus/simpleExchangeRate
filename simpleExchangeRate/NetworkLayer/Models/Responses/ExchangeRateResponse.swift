@@ -12,7 +12,7 @@ struct ExchangeRateResponse: Codable {
     let date, previousDate: String?
     let previousURL: String?
     let timestamp: String?
-    let valute: [String: Valute]?
+    let valute: [String: ValuteResponse]?
 
     enum CodingKeys: String, CodingKey {
         case date = "Date"
@@ -24,7 +24,7 @@ struct ExchangeRateResponse: Codable {
 }
 
 // MARK: - Valute
-struct Valute: Codable {
+struct ValuteResponse: Codable {
     let id, numCode, charCode: String?
     let nominal: Int?
     let name: String?

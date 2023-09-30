@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-typealias ValuteData = [String: Valute]
+typealias ValuteData = [String: ValuteResponse]
 
 class MainModel {
     
@@ -38,17 +38,23 @@ class MainModel {
         }
     }
     
-    func prepareData() -> ValuteData? {
+    func prepareData() -> [Valute] {
         loadData()
         if let valuteDataObjects = valuteDataObjects {
-            var data = ValuteData()
+            var data = [Valute]()
+            
             for item in valuteDataObjects {
-                data.updateValue(Valute(id: nil, numCode: nil, charCode: nil, nominal: nil, name: nil, value: item.value, previous: nil), forKey: (item.symbol ?? ""))
+                let valute = Valute(value: item.value, lastUpdate: item.appLaunchDate, symbol: item.symbol)
+                data.append(valute)
             }
+
+            data.sort { $0.symbol ?? "" < $1.symbol ?? "" }
+            
             return data
         } else {
-            return ValuteData()
+            return [Valute]()
         }
     }
+
 }
 

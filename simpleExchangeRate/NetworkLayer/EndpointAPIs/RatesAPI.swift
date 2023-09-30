@@ -27,7 +27,8 @@ struct RatesAPI {
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
-                    observer.onError(error)
+                    let errorMessage = NetworkError.handleError(error)
+                    observer.onError(NetworkError.serverError(message: errorMessage))
                 } else if let data = data {
                     do {
                         let exchangeRateResponse = try JSONDecoder().decode(ExchangeRateResponse.self, from: data)
@@ -37,7 +38,7 @@ struct RatesAPI {
                         observer.onError(error)
                     }
                 } else {
-                    observer.onError(NSError(domain: "getExchangeRates", code: 1, userInfo: nil))
+                    observer.onError(NetworkError.unknownError)
                 }
             }
             task.resume()
@@ -47,6 +48,7 @@ struct RatesAPI {
             }
         }
     }
+
 }
 
 

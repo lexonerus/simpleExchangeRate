@@ -8,6 +8,16 @@
 
 "MainScene.Button.Title" = "Обновить";
 "MainScene.Title" = "Курс Валют";
+"MainScene.ErrorAlert.Title" = "Упс, Ошибка";
+"MainScene.ErrorAlert.Message" = "%@\nЗагружены локальные данные.";
+"MainScene.ErrorAlert.ButtonTitle" = "Окей";
 
 "ValuteCell.KeyTitle" = "Символ";
 "ValuteCell.KeyValue" = "Значение";
+
+"NetworkError.noInternetConnection" = "Нет интернет-соединения. Проверьте подключение.";
+"NetworkError.requestTimedOut" = "Запрос завершился по таймауту.";
+"NetworkError.serverError" = "Ошибка сервера: %@";
+"NetworkError.authenticationFailed" = "Ошибка аутентификации.";
+"NetworkError.unauthorizedAccess" = "Доступ запрещен.";
+"NetworkError.unknownError" = "Неизвестная ошибка: %@";
