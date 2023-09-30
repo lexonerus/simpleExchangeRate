@@ -6,8 +6,6 @@
   
 */
 
-"CFBundleDisplayName" = "Exchange Rates";
-
 "MainScene.Button.Title" = "Press to refresh";
 "MainScene.Title" = "Exchange rates";
 "MainScene.ErrorAlert.Title" = "Oops, Error";

@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  simpleExchangeRate
+
+  Created by Alexey Krzywicki on 30.09.2023.
+  
+*/
+
+"CFBundleDisplayName" = "Exchange Rates";
+

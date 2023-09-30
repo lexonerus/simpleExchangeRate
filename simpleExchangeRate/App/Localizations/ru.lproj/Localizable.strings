@@ -6,8 +6,6 @@
   
 */
 
-"CFBundleDisplayName" = "Курс Валют";
-
 "MainScene.Button.Title" = "Обновить";
 "MainScene.Title" = "Курс Валют";
 "MainScene.ErrorAlert.Title" = "Упс, Ошибка";
