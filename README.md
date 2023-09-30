@@ -25,6 +25,15 @@
   - pod 'RealmSwift'
   - pod 'DeviceKit'
 
+### Архитектура проекта
+- **Слой App:** Основные точки входа в приложение, такие как AppDelegate и SceneDelegate.
+- **Слой локализации:** Локализованные ресурсы приложения.
+- **Слой ресурсов:** Ресурсы приложения.
+- **Слой расширений:** Расширения стандартных библиотек Swift.
+- **Сетевой слой:** Сетевой код приложения.
+- **Слой Scenes:** Сцены приложения.
+- **Слой Services:** Службы приложения.
+
 ## Screenshots
 ![Simulator Screenshot - iPhone 15 Plus - 2023-09-30 at 12 47 58](https://github.com/lexonerus/simpleExchangeRate/assets/26347340/2508c611-ae6a-4d4d-b29f-1bc4dc302fa5)
 ![Simulator Screenshot - iPhone 15 Plus - 2023-09-30 at 13 40 52](https://github.com/lexonerus/simpleExchangeRate/assets/26347340/76d8f308-5a1e-4769-87a9-38b4f48e9ef6)
