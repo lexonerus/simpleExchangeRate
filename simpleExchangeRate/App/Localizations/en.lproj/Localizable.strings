@@ -8,6 +8,16 @@
 
 "MainScene.Button.Title" = "Press to refresh";
 "MainScene.Title" = "Exchange rates";
+"MainScene.ErrorAlert.Title" = "Oops, Error";
+"MainScene.ErrorAlert.Message" = "%@\nLoaded local data.";
+"MainScene.ErrorAlert.ButtonTitle" = "Ok";
 
 "ValuteCell.KeyTitle" = "Symbol";
 "ValuteCell.KeyValue" = "Value";
+
+"NetworkError.noInternetConnection" = "Please, check internet connection.";
+"NetworkError.requestTimedOut" = "Request timed-out.";
+"NetworkError.serverError" = "Server error: %@";
+"NetworkError.authenticationFailed" = "Auth failed.";
+"NetworkError.unauthorizedAccess" = "Access denied.";
+"NetworkError.unknownError" = "Unknown error: %@";

@@ -56,7 +56,7 @@ private extension ValuteTableViewCell {
     func configureKeyTitle() {
         contentView.addSubview(keyTitle)
         keyTitle.font = UIFont.systemFont(ofSize: Constraints.ValuteCell.cellTitleFont, weight: .light)
-        keyTitle.textColor = .lightGray
+        keyTitle.textColor = .gray
         keyTitle.text = "ValuteCell.KeyTitle".localized
         
         keyTitle.snp.makeConstraints { make in
@@ -77,7 +77,7 @@ private extension ValuteTableViewCell {
     func configureValueTitle() {
         contentView.addSubview(valueTitle)
         valueTitle.font = UIFont.systemFont(ofSize: Constraints.ValuteCell.cellTitleFont, weight: .light)
-        valueTitle.textColor = .lightGray
+        valueTitle.textColor = .gray
         valueTitle.text = "ValuteCell.KeyValue".localized
         
         valueTitle.snp.makeConstraints { make in

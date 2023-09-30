@@ -32,6 +32,7 @@ enum Constraints {
         static let buttonLeading = Constraints.selectValueByScreen(small: 10.0, normal: 15.0, large: 20.0)
         static let buttonTrailing = Constraints.selectValueByScreen(small: 10.0, normal: 15.0, large: 20.0)
         static let buttonHeight = Constraints.selectValueByScreen(small: 30.0, normal: 40.0, large: 45.0)
+        static let buttonBottomInset = Constraints.selectValueByScreen(small: 30.0, normal: 40.0, large: 50.0)
         
         static let tableViewBottom = Constraints.selectValueByScreen(small: 20.0, normal: 25.0, large: 30.0)
     }

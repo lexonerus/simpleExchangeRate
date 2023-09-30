@@ -22,6 +22,10 @@
 		086FE7A92AC6FC0300A875A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FE7A82AC6FC0300A875A0 /* MainViewController.swift */; };
 		086FE7AE2AC6FC0500A875A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086FE7AD2AC6FC0500A875A0 /* Assets.xcassets */; };
 		086FE7B12AC6FC0500A875A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086FE7AF2AC6FC0500A875A0 /* LaunchScreen.storyboard */; };
+		0888BFC12AC8198300B688C4 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFC02AC8198300B688C4 /* ReachabilityService.swift */; };
+		0888BFC72AC8234B00B688C4 /* Valute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFC62AC8234B00B688C4 /* Valute.swift */; };
+		0888BFC92AC82A6000B688C4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFC82AC82A6000B688C4 /* NetworkError.swift */; };
+		0888BFCB2AC8313F00B688C4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0888BFCA2AC8313F00B688C4 /* Provider.swift */; };
 		08DE181D2AC70A230001C620 /* ExchangeRateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE181C2AC70A230001C620 /* ExchangeRateResponse.swift */; };
 		08DE181F2AC70A8F0001C620 /* RatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE181E2AC70A8F0001C620 /* RatesAPI.swift */; };
 		08DE18212AC70AC60001C620 /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE18202AC70AC60001C620 /* ServerConstants.swift */; };
@@ -50,6 +54,10 @@
 		086FE7AD2AC6FC0500A875A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086FE7B02AC6FC0500A875A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		086FE7B22AC6FC0500A875A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0888BFC02AC8198300B688C4 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		0888BFC62AC8234B00B688C4 /* Valute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valute.swift; sourceTree = "<group>"; };
+		0888BFC82AC82A6000B688C4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0888BFCA2AC8313F00B688C4 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		08DE181C2AC70A230001C620 /* ExchangeRateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateResponse.swift; sourceTree = "<group>"; };
 		08DE181E2AC70A8F0001C620 /* RatesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAPI.swift; sourceTree = "<group>"; };
 		08DE18202AC70AC60001C620 /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
@@ -85,11 +93,9 @@
 		081DD9E72AC72D4300213AF0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				081DDA002AC74E0800213AF0 /* CustomCells */,
-				086FE7A82AC6FC0300A875A0 /* MainViewController.swift */,
-				081DD9ED2AC72F2200213AF0 /* MainViewModel.swift */,
-				081DD9FE2AC748C000213AF0 /* ValuteObject.swift */,
-				0859CFAD2AC76DCC00FC3D58 /* MainModel.swift */,
+				0888BFC52AC8232400B688C4 /* ViewModel */,
+				0888BFC42AC8231A00B688C4 /* Model */,
+				0888BFC22AC8230900B688C4 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -184,13 +190,51 @@
 			path = simpleExchangeRate;
 			sourceTree = "<group>";
 		};
+		0888BFBF2AC8197400B688C4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0888BFC02AC8198300B688C4 /* ReachabilityService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0888BFC22AC8230900B688C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				081DDA002AC74E0800213AF0 /* CustomCells */,
+				086FE7A82AC6FC0300A875A0 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0888BFC42AC8231A00B688C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0859CFAD2AC76DCC00FC3D58 /* MainModel.swift */,
+				081DD9FE2AC748C000213AF0 /* ValuteObject.swift */,
+				0888BFC62AC8234B00B688C4 /* Valute.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0888BFC52AC8232400B688C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				081DD9ED2AC72F2200213AF0 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		08DE18012AC7075E0001C620 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				0888BFBF2AC8197400B688C4 /* Services */,
 				08DE18042AC7077E0001C620 /* Models */,
 				08DE18022AC7076B0001C620 /* EndpointAPIs */,
 				08DE18202AC70AC60001C620 /* ServerConstants.swift */,
 				08DE18292AC719B70001C620 /* HTTPMethod.swift */,
+				0888BFC82AC82A6000B688C4 /* NetworkError.swift */,
+				0888BFCA2AC8313F00B688C4 /* Provider.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -376,6 +420,7 @@
 				086FE7A92AC6FC0300A875A0 /* MainViewController.swift in Sources */,
 				081DDA022AC74E6C00213AF0 /* ValuteTableViewCell.swift in Sources */,
 				08DE181F2AC70A8F0001C620 /* RatesAPI.swift in Sources */,
+				0888BFC92AC82A6000B688C4 /* NetworkError.swift in Sources */,
 				0859CFB02AC772B400FC3D58 /* AppLaunchService.swift in Sources */,
 				08DE18282AC7115E0001C620 /* NSObject+Extension.swift in Sources */,
 				081DD9F52AC7404D00213AF0 /* String+Extension.swift in Sources */,
@@ -384,7 +429,10 @@
 				0859CFAC2AC760FC00FC3D58 /* Double+Extension.swift in Sources */,
 				08DE181D2AC70A230001C620 /* ExchangeRateResponse.swift in Sources */,
 				086FE7A52AC6FC0300A875A0 /* AppDelegate.swift in Sources */,
+				0888BFC72AC8234B00B688C4 /* Valute.swift in Sources */,
 				086FE7A72AC6FC0300A875A0 /* SceneDelegate.swift in Sources */,
+				0888BFCB2AC8313F00B688C4 /* Provider.swift in Sources */,
+				0888BFC12AC8198300B688C4 /* ReachabilityService.swift in Sources */,
 				081DD9F02AC7300D00213AF0 /* UIViewController+Extension.swift in Sources */,
 				081DD9FF2AC748C000213AF0 /* ValuteObject.swift in Sources */,
 				081DD9EE2AC72F2200213AF0 /* MainViewModel.swift in Sources */,
