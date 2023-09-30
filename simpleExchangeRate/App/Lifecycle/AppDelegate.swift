@@ -11,10 +11,10 @@ import netfox
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         NFX.sharedInstance().start()
+        AppLaunchService.shared.appLaunchDate = Date()
         return true
     }
 
