@@ -18,6 +18,7 @@ class MainViewController: MyViewController {
     private let button = UIButton()
     private let tableView = UITableView()
     private let loader = UIActivityIndicatorView()
+    private let refreshControl = UIRefreshControl()
     
     // MARK: - Initializers
     init(viewModel: MainViewModel? = nil) {
@@ -67,7 +68,9 @@ private extension MainViewController {
         tableView.dataSource = self
         tableView.register(ValuteTableViewCell.self, forCellReuseIdentifier: Constraints.ValuteCell.identifier)
         tableView.alpha = 0
-        tableView.backgroundColor = .black
+        tableView.backgroundColor = #colorLiteral(red: 0.972730027, green: 0.9611258826, blue: 0.9524819678, alpha: 1)
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(tableViewPulled), for: .valueChanged)
         
         tableView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -110,9 +113,12 @@ private extension MainViewController {
     func bindData() {
         viewModel?.onDataUpdate = { [weak self] in
             DispatchQueue.main.async {
-                self?.loader.stopAnimating()
                 self?.moveButtonToBottom()
                 self?.tableView.reloadData()
+                self?.loader.stopAnimating()
+                if let isRefreshing = self?.refreshControl.isRefreshing, isRefreshing {
+                    self?.refreshControl.endRefreshing()
+                }
             }
         }
     }
@@ -129,8 +135,12 @@ private extension MainViewController {
 // MARK: - Actions
 private extension MainViewController {
     @objc func buttonPressed() {
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred(intensity: 1.0)
         viewModel?.fetchExchangeRates()
         loader.startAnimating()
+    }
+    @objc func tableViewPulled() {
+        viewModel?.fetchExchangeRates()
     }
     func showErrorAlert(error: String) {
         let alertController = UIAlertController(title: "MainScene.ErrorAlert.Title".localized,
