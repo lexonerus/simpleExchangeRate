@@ -4,8 +4,6 @@
 <dict>
 	<key>LSHasLocalizedDisplayName</key>
 	<true/>
-	<key>CFBundleDisplayName</key>
-	<string>Exchange Rates</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
